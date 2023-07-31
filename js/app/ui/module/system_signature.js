@@ -638,7 +638,8 @@ define([
                                 inputclass: module._config.fontUppercaseClass,
                                 display: function(value){
                                     // change display value to first 3 chars -> unicode beware
-                                    $(this).text([...$.trim(value)].slice(0, 3).join('').toLowerCase());
+                                    //$(this).text([...$.trim(value)].slice(0, 3).join('').toLowerCase());
+                                    $(this).text(value);
                                 },
                                 validate: function(value){
                                     let msg = false;
