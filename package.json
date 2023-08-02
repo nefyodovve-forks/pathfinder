@@ -6,7 +6,6 @@
   },
   "description": "Pathfinder is a system mapping tool for EVE ONLINE",
   "main": "index.php",
-  "dependencies": {},
   "devDependencies": {
     "ansi-colors": "^4.1.1",
     "babel": "^6.23.0",

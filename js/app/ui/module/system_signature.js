@@ -622,7 +622,7 @@ define([
                         createdCell: function(cell, cellData, rowData, rowIndex, colIndex){
                             let tableApi = this.api();
 
-                            module.updateTooltip(cell, cellData);
+                            //module.updateTooltip(cell, cellData);
 
                             module.editableOnSave(tableApi, cell, [], ['group:name', 'type:name', 'action:name']);
                             module.editableOnHidden(tableApi, cell);
@@ -1298,6 +1298,15 @@ define([
                             if(sigGroupId !== 5){
                                 // try to get "typeId" from description string
                                 let sigDescriptionLowerCase = sigDescription.toLowerCase();
+                                // if description has parentheses then their content should be tested
+                                let parContent = sigDescriptionLowerCase.substring(
+                                    sigDescriptionLowerCase.search(/\(/) + 1,
+                                    sigDescriptionLowerCase.search(/\)/)
+                                );
+
+                                if (parContent !== "") {
+                                    sigDescriptionLowerCase = parContent;
+                                }
 
                                 let typeOptions = SystemSignatureModule.getSignatureTypeOptions(
                                     this._systemData.type.id,
