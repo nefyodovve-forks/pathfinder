@@ -170,7 +170,28 @@ define([], () => {
                 class: 'fa-poop',
                 label: 'poop',
                 unicode: '&#xf619;'
-            }
+            }, {
+		class: 'fa-sun',
+		label: 'sun',
+		unicode: '&#xf185;'
+	    }, {
+		class: 'fa-bahai',
+		label: 'bahai',
+		unicode: '&#xf666;'
+	    }, {
+		class: 'fa-star-of-life',
+		label: 'star of life',
+		unicode: '&#xf621;'
+	    }, {
+		class: 'fa-cog',
+		label: 'cog',
+		unicode: '&#xf013;'
+	    }, {
+		class: 'fa-cogs',
+		label: 'cogs',
+		unicode: '&#xf085;'
+	    }
+	
         ],
         classes: {
             // log types
